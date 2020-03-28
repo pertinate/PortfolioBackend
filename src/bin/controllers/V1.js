@@ -5,7 +5,6 @@
  * 1 class per version of APIs.
  */
 import { getGoogleLogo } from '../services/google';
-import { EmailLogin } from '../services/Firebase';
 
 export default class V1 {
     constructor() {
