@@ -7,23 +7,6 @@ const router = express.Router();
 
 router.use(cookieParser());
 
-router.use((request, response, next) => {
-    if (request.cookies.token !== undefined) {
-        ValidateToken(request.cookies.token)
-            .then(result => {
-                console.log(result);
-                return next();
-            })
-            .catch(error => {
-                console.error(error);
-                return response.send({ action: 'login' });
-            });
-    } else {
-        console.log('No cookie token');
-        return response.send({ action: 'register' });
-    }
-});
-
 router.get('/test', (request, response) => response.send({ message: 'test' }));
 
 // V1 routes go here
