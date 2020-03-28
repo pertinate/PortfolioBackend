@@ -1,7 +1,6 @@
 import express from 'express';
 import V1 from './controllers/V1';
 import cookieParser from 'cookie-parser';
-import { ValidateToken, EmailLogin } from './services/Firebase';
 
 const v1 = new V1();
 const router = express.Router();
