@@ -16,10 +16,6 @@ router.use(
     '/static/',
     express.static(path.resolve('../PortfolioFrontend/build/static/'))
 );
-
-router.get('/', (request, response) =>
-    response.sendFile(path.resolve('../PortfolioFrontend/build/index.html'))
-);
 router.get('/test', (request, response) => response.send({ message: 'test' }));
 
 // V1 routes go here

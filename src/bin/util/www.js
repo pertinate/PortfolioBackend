@@ -10,7 +10,11 @@ export default () => {
     app.use(express.json());
     app.use(express.urlencoded({ extended: false }));
 
+    app.get('/', (request, response) =>
+        response.sendFile(path.resolve('../PortfolioFrontend/build/index.html'))
+    );
+
     app.use(`/${name}`, controller);
 
     return app;
-}
+};
