@@ -8,6 +8,8 @@ const router = express.Router();
 
 router.use(cookieParser());
 
+router.use(express.static(path.resolve('../PortfolioFrontend/build/')));
+
 router.get('/', (request, response) =>
     response.sendFile(path.resolve('../PortfolioFrontend/build/index.html'))
 );
