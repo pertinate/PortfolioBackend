@@ -9,7 +9,7 @@ const router = express.Router();
 router.use(cookieParser());
 
 router.get('/', (request, response) =>
-    response.sendFile(path.resolve('../PortfolioFrontend/build/index'))
+    response.sendFile(path.resolve('../PortfolioFrontend/build/index.html'))
 );
 router.get('/test', (request, response) => response.send({ message: 'test' }));
 
