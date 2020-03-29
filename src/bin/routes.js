@@ -9,11 +9,11 @@ const router = express.Router();
 router.use(cookieParser());
 
 router.use(
-    '/public',
+    '/public/',
     express.static(path.resolve('../PortfolioFrontend/public/'))
 );
 router.use(
-    '/static',
+    '/static/',
     express.static(path.resolve('../PortfolioFrontend/build/static/'))
 );
 
