@@ -1,6 +1,7 @@
 import express from 'express';
 import packageJson from '../../../package.json';
 import controller from '../routes';
+import path from 'path';
 
 // Any express middleware gets set here
 
